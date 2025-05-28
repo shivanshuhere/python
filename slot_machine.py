@@ -50,7 +50,6 @@ def spin():
 
     balance_label.config(text=f"Current Balance: ${balance.get()}")
 
-
 def close_window():
     window.destroy()
 
@@ -60,7 +59,7 @@ def new_game():
 
 window = tk.Tk()
 window.title("🕹️ Slot Machine")
-window.geometry("500x400")
+window.geometry("700x500")
 window.config(background="black")
 
 title_font = ('Arial', 20, 'bold')
@@ -74,13 +73,14 @@ balance = tk.IntVar(value=100)
 balance_label = ttk.Label(window, text=f"Current Balance: ${balance.get()}", background="black", foreground="white", font=subheading_font)
 balance_label.pack(pady=10)
 
+
 ttk.Label(window, text="Enter Bid Amount ($):", background="black", foreground="white", font=subheading_font).pack()
 bid = tk.StringVar()
 ttk.Entry(window, textvariable=bid).pack(pady=5)
 
-ttk.Button(window, text="🎰 Spin", command=spin).pack(pady=10)
-ttk.Button(window, text="🚪🚶Exit ", command=close_window).pack(pady=10)
-ttk.Button(window, text="🔄 New Game", command=new_game).pack(pady=10)
+spin_btn = ttk.Button(window, text="🎰 Spin", command=spin).pack(pady=10)
+new_game_btn = ttk.Button(window, text="🔄 Restart", command=new_game).pack(pady=10)
+exit_btn  = ttk.Button(window, text="🚪🚶Exit ", command=close_window).pack(pady=10)
 
 slot_display = ttk.Label(window, text="---|---|--- ", background="black", foreground="white", font=title_font)
 slot_display.pack(pady=20)
