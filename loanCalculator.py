@@ -3,7 +3,6 @@ from tkinter import *
 class LoanCalculator:
 
     def __init__(self):
-
         window = Tk()  
         window.title("Loan Calculator")  
         window.geometry("600x700")  
