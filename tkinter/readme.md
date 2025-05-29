@@ -20,14 +20,18 @@
 
 > Tkinter uses the geometry manager to arrange widgets on a window or frame. Tkinter supports three geometry managers:
 
+-   Pack
+-   Grid
+-   Place
+
 ### 1. Pack
 
 > You use the pack geometry manager to arrange widgets in one direction, either vertically or horizontally.
 > The pack geometry manager has many options:
 
-Side
-Expand
-Fill
-ipadx, ipady
-padx, pady
-Anchor
+-   Side (df=top, bottom, left, right)
+-   Expand
+-   Fill
+-   ipadx, ipady
+-   padx, pady
+-   Anchor
