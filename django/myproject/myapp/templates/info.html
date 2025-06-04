@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Information {% endblock %}
+{% block content %}
+<h1>Info Page</h1>
+<h2>Information</h2>
+{% for item in info %} Name :{{ item.name }} <br />
+Age : {{item.age}} <br />
+Married : {{item.married}} <br />
+{% endfor %}
+{% endblock %}
